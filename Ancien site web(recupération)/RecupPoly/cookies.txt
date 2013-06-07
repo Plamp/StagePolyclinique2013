@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+clinalpsud.fr	TRUE	/	FALSE	1999999999	mailplanBAK	R2555597130
+clinalpsud.fr	TRUE	/	FALSE	1999999999	mailplan	R3631026760
+
