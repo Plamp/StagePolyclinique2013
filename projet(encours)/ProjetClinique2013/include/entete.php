@@ -11,37 +11,37 @@
 <br />
 <div id="menu" style="position:absolute; align='center';" >
 <ul>
-  <li  class="Li1"><a href="Index2.php">Accueil</a></li>
-  <li  class="Li1"><a href="Sejour.php">Votre séjour</a>
+  <li  class="Li1"><a href="../pages/Index2.php">Accueil</a></li>
+  <li  class="Li1"><a href="../pages/Sejour.php">Votre séjour</a>
     <ul>
-      <li class="Li2"><a href="Demarche.php">Démarche qualité</a></li>
+      <li class="Li2"><a href="../pages/Demarche.php">Démarche qualité</a></li>
     </ul>
   </li>
-  <li class="Li1"><a href="Environnement.php">Environnement</a>
+  <li class="Li1"><a href="../pages/Environnement.php">Environnement</a>
   <ul>
-      <li class="Li2"><a href="EquipeMed.php">Equipe medicale</a></li>
+      <li class="Li2"><a href="../pages/EquipeMed.php">Equipe medicale</a></li>
     </ul>
     <ul>
-    <li><a href="Congres.php">Congrés</a></li>
+    <li><a href="../pages/Congres.php">Congrés</a></li>
     </ul>
     </li>
-      <li  class="Li1"><a href="Poly.php">Les grandes dates</a></li>
-      <li class="Li1"><a href="com&com.php">Commités et Commissions</a>
+      <li  class="Li1"><a href="../pages/Poly.php">Les grandes dates</a></li>
+      <li class="Li1"><a href="../pages/com&com.php">Commités et Commissions</a>
   <ul>
-      <li class="Li2"><a href="Hemovigilance.php">Hémovigilance</a></li>
+      <li class="Li2"><a href="../pages/Hemovigilance.php">Hémovigilance</a></li>
     </ul>
     <ul>
-    <li><a href="Anti-Inf.php">Anti-infectueux</a></li>
+    <li><a href="../pages/Anti-Inf.php">Anti-infectueux</a></li>
     </ul>
      <ul>
-    <li><a href="Clud.php">C.L.U.D</a></li>
+    <li><a href="../pages/Clud.php">C.L.U.D</a></li>
     </ul>
     </li>
-    <li class="Li1"><a href="Had.php">Hospitalisation à domicile </a></li>
-    <li class="Li1"><a href="Hem.php">L'homme en mouvement </a></li>
-    <li class="Li1"><a href="Contact.php">Contact</a>
+    <li class="Li1"><a href="../pages/Had.php">Hospitalisation à domicile </a></li>
+    <li class="Li1"><a href="../pages/Hem.php">L'homme en mouvement </a></li>
+    <li class="Li1"><a href="../pages/Contact.php">Contact</a>
     <ul>
-    <li class="Li2"><a href="NousRejoindre.php">Nous rejoindre</a></li>
+    <li class="Li2"><a href="../pages/NousRejoindre.php">Nous rejoindre</a></li>
     </ul>
     </li>
 </ul>
