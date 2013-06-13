@@ -256,7 +256,7 @@ Insert into Partie values("5"," HEBERGEMENT","hospi");
 Insert into Partie values("6","RESTAURATION","hospi");
 Insert into Partie values("7","V. PRISE EN CHARGE MEDICALE","hospi");
 Insert into Partie values("8","LES EQUIPES DE SOINS","hospi");
-Insert into Partie values("9","LES MEDECINS","hospi");
+Insert into Partie values("9","LES MEDECINS","hospi");  
 Insert into Partie values("10","BRANCARDAGE","hospi");
 Insert into Partie values("11","BLOC OPERATOIRE / RADIOLOGIE","hospi");
 Insert into Partie values("12","PRISE EN CHARGE DE LA DOULEUR","hospi");
@@ -269,7 +269,7 @@ Insert into Partie values("14","VII. APPRECIATION GENERALE","hospi");
 
 Insert into ContenuPartie values("1","ambu","1","Facilité d'accès et de stationnement");
 Insert into ContenuPartie values("1","ambu","2","Signalisation intérieure");
-Insert into ContenuPartie values("1","ambu","3","Qualité du site internet ([url]www.clinalpsud.com[/url])");
+Insert into ContenuPartie values("1","ambu","3","Qualité du site internet (<a href='http://www.clinalpsud.com'>www.clinalpsud.com </a>)");
 
 Insert into ContenuPartie values("2","ambu","1","Délai d'attente");
 Insert into ContenuPartie values("2","ambu","2","Qualité des informations transmises");
@@ -356,59 +356,53 @@ Insert into ContenuPartie values("3","hospi","4","Qualité des informations donn
 Insert into ContenuPartie values("3","hospi","5","Qualité du livret d'accueil");
 Insert into ContenuPartie values("3","hospi","6","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("4","hospi","1","Chambre (confort, télévision, téléphone…)");
-Insert into ContenuPartie values("4","hospi","2","Propreté de la chambre");
-Insert into ContenuPartie values("4","hospi","3","Calme");
-Insert into ContenuPartie values("4","hospi","4","Avez-vous obtenu une chambre particulière (si vous en avez fait la demande) ?");
-Insert into ContenuPartie values("4","hospi","5","Remarques / Suggestions :");
+Insert into ContenuPartie values("5","hospi","1","Chambre (confort, télévision, téléphone…)");
+Insert into ContenuPartie values("5","hospi","2","Propreté de la chambre");
+Insert into ContenuPartie values("5","hospi","3","Calme");
+Insert into ContenuPartie values("5","hospi","4","Avez-vous obtenu une chambre particulière (si vous en avez fait la demande) ?");
+Insert into ContenuPartie values("5","hospi","5","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("5","hospi","1","Qualité des repas");
-Insert into ContenuPartie values("5","hospi","2","Quantité des repas");
-Insert into ContenuPartie values("5","hospi","3","Horaire des repas");
-Insert into ContenuPartie values("5","hospi","4","Présentation des plateaux");
-Insert into ContenuPartie values("5","hospi","5","Température des plats");
-Insert into ContenuPartie values("5","hospi","7","Remarques / Suggestions :");
+Insert into ContenuPartie values("6","hospi","1","Qualité des repas");
+Insert into ContenuPartie values("6","hospi","2","Quantité des repas");
+Insert into ContenuPartie values("6","hospi","3","Horaire des repas");
+Insert into ContenuPartie values("6","hospi","4","Présentation des plateaux");
+Insert into ContenuPartie values("6","hospi","5","Température des plats");
+Insert into ContenuPartie values("6","hospi","7","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("6","hospi","1","Disponibilité / Amabilité");
-Insert into ContenuPartie values("6","hospi","2","Respect de l'intimité et de la confidentialité");
-Insert into ContenuPartie values("6","hospi","3","Qualité des informations et des soins donnés");
-Insert into ContenuPartie values("6","hospi","4","Présentation et identification du personnel");
-Insert into ContenuPartie values("6","hospi","5","Accueil réservé à vos proches");
-Insert into ContenuPartie values("6","hospi","6","Remarques / Suggestions :");
-
-Insert into ContenuPartie values("7","hospi","1","Disponibilité / Amabilité");
-Insert into ContenuPartie values("7","hospi","2","Respect de l'intimité et de la confidentialité");
-Insert into ContenuPartie values("7","hospi","3","Qualité des informations et des soins donnés");
-Insert into ContenuPartie values("7","hospi","4","Remarques / Suggestions :");
-
-Insert into ContenuPartie values("8","hospi","1","Amabilité");
+Insert into ContenuPartie values("8","hospi","1","Disponibilité / Amabilité");
 Insert into ContenuPartie values("8","hospi","2","Respect de l'intimité et de la confidentialité");
-Insert into ContenuPartie values("8","hospi","3","Sécurité");
-Insert into ContenuPartie values("8","hospi","4","Remarques / Suggestions :");
+Insert into ContenuPartie values("8","hospi","3","Qualité des informations et des soins donnés");
+Insert into ContenuPartie values("8","hospi","4","Présentation et identification du personnel");
+Insert into ContenuPartie values("8","hospi","5","Accueil réservé à vos proches");
+Insert into ContenuPartie values("8","hospi","6","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("9","hospi","1","Qualité de l'accueil");
-Insert into ContenuPartie values("9","hospi","2","Délai d'attente à l'entrée");
-Insert into ContenuPartie values("9","hospi","3","Respect de l'intimité et de la confidentialité");
+Insert into ContenuPartie values("9","hospi","1","Disponibilité / Amabilité");
+Insert into ContenuPartie values("9","hospi","2","Respect de l'intimité et de la confidentialité");
+Insert into ContenuPartie values("9","hospi","3","Qualité des informations et des soins donnés");
 Insert into ContenuPartie values("9","hospi","4","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("10","hospi","1","Qualité de la prise en charge");
-Insert into ContenuPartie values("10","hospi","2","Avez-vous souffert ?");
-Insert into ContenuPartie values("10","hospi","3","Si oui, en avez-vous averti le personnel soignant ?");
-Insert into ContenuPartie values("10","hospi","4","A-t-on répondu à votre demande ?");
-Insert into ContenuPartie values("10","hospi","5","Remarques / Suggestions :");
+Insert into ContenuPartie values("10","hospi","1","Amabilité");
+Insert into ContenuPartie values("10","hospi","2","Respect de l'intimité et de la confidentialité");
+Insert into ContenuPartie values("10","hospi","3","Sécurité");
+Insert into ContenuPartie values("10","hospi","4","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("11","hospi","1","Délai d'attente (formalités administratives)");
-Insert into ContenuPartie values("11","hospi","2","Information sur le devenir personnel");
-Insert into ContenuPartie values("11","hospi","3","Remarques / Suggestions :");
+Insert into ContenuPartie values("11","hospi","1","Qualité de l'accueil");
+Insert into ContenuPartie values("11","hospi","2","Délai d'attente à l'entrée");
+Insert into ContenuPartie values("11","hospi","3","Respect de l'intimité et de la confidentialité");
+Insert into ContenuPartie values("11","hospi","4","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("12","hospi","1","Qualité du séjour");
-Insert into ContenuPartie values("12","hospi","2","Recommanderiez-vous la polyclinique à l'un de vos proches ?");
-Insert into ContenuPartie values("12","hospi","3","Remarques / Suggestions :");
+Insert into ContenuPartie values("12","hospi","1","Qualité de la prise en charge");
+Insert into ContenuPartie values("12","hospi","2","Avez-vous souffert ?");
+Insert into ContenuPartie values("12","hospi","3","Si oui, en avez-vous averti le personnel soignant ?");
+Insert into ContenuPartie values("12","hospi","4","A-t-on répondu à votre demande ?");
+Insert into ContenuPartie values("12","hospi","5","Remarques / Suggestions :");
 
-Insert into ContenuPartie values("13","hospi","1","Qualité du Délai d'attente (formalités administratives)");
+Insert into ContenuPartie values("13","hospi","1","Délai d'attente(formalités administratives)");
 Insert into ContenuPartie values("13","hospi","2","Information sur le devenir personnel");
 Insert into ContenuPartie values("13","hospi","3","Remarques / Suggestions :");
 
 Insert into ContenuPartie values("14","hospi","1","Qualité du séjour");
 Insert into ContenuPartie values("14","hospi","2","Recommanderiez-vous la polyclinique à l'un de vos proches ?");
 Insert into ContenuPartie values("14","hospi","3","Remarques / Suggestions :");
+
+
