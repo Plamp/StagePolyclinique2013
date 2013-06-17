@@ -405,4 +405,7 @@ Insert into ContenuPartie values("14","hospi","1","Qualité du séjour");
 Insert into ContenuPartie values("14","hospi","2","Recommanderiez-vous la polyclinique à l'un de vos proches ?");
 Insert into ContenuPartie values("14","hospi","3","Remarques / Suggestions :");
 
-
+-- Implémentation des valeurs de la relation Utilisateur :
+Insert into Utilisateur values(null,"plampson","Clinalp01!");
+Insert into Utilisateur values(null,"froux","Clinalp02!");
+Insert into Utilisateur values(null,"iprothoy","Clinalp03!");

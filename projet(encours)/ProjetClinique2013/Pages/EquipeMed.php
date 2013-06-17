@@ -3,10 +3,8 @@
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
 <body>
-<div id="divleft"></div><div id="divright">
-</div>
-<div id="divmiddle">
-<p style="text-align: center;"><span style="font-size: xx-small; color: #aadbe2;">docteur, deau, guillet, ibanez, para, sevin, vallat, bonnueil, roussin, cointe, fournier, lagier, semiond, velon, cilirie, albran, galinier, marchand, laurendon, macey, thomas, waldner, burguiere, le-bourdon, follens, vankerkoven, benrahho, cartier, manopoulos, peres, vanderweyen, apap, brunet, lebourdon, trovero, alimi, boyer, mondet</span></p>
+
+
 <p style="text-align: center;"><strong>ANESTHÉSIE</strong><strong> - RÉANIMATION</strong></p>
 <p style="text-align: center;"><strong>Tél. 04-92-40-14-73</strong></p>
 <p style="text-align: center;"><img title="Equipe réanimation." src="../Image/equipe_reanimation.jpg" alt="" width="600" height="553" /></p>
@@ -56,6 +54,7 @@
 <p style="text-align: center;"><strong>UROLOGIE</strong></p>
 <p style="text-align: center;"><strong>Tél. 04-92-56-10-24</strong></p>
 <p style="text-align: center;"><img  title="Equipe urologie." src="../Image/equipe_urologie.jpg" alt="" width="630" height="287" /></p>
+<?php include("../include/pied.php");?>
 </div>
 </body>
 </html>

@@ -3,10 +3,8 @@
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
 <body>
-<div id="divleft"></div><div id="divright">
-</div>
-<div id="divmiddle">
-<p style="text-align: justify;"><strong>Le Comité Hémovigilance de la Polyclinique des Alpes du Sud vous informe :</strong></p>
+
+<h2><center><strong>Le Comité Hémovigilance de la Polyclinique des Alpes du Sud vous informe :</strong></center></h2>
 <p style="text-align: center;"><span style="color: #ff0000;"><strong>INFORMATION SUR LA TRANSFUSION SANGUINE</strong></span></p>
 <p style="text-align: justify;">La transfusion sanguine est un traitement qui peut être nécessaire en cas de manque de globules rouges, de plaquettes, de facteurs de coagulation, de globules blancs. Pour chacune de ces situations, il existe un produit particulier.</p>
 <p style="text-align: justify;">Comme tout traitement, la transfusion comporte des avantages et des inconvénients. Elle n'est envisagée par votre médecin que lorsque les bénéfices attendus pour votre santé sont supérieurs aux risques encourus.</p>
@@ -20,7 +18,8 @@
 
 <p style="text-align: justify;">− Comme tout traitement, la transfusion comporte des risques. Des réactions sans conséquences graves peuvent survenir pendant et après transfusion, comme de l'urticaire ou des frissons et de la fièvre, sans causes infectieuse.<br />
 
-  − Les autres risques sont aujourd'hui limités grâce aux mesures déjà prises. Il s'agit de risques : <span style="text-decoration: underline;">*résiduels de contamination.</span> Ils continuent de diminuer avec les progrès des connaissances et des techniques. Les estimations de L'Institut National de Veille Sanitaire (INVS) pour 2005 sont les suivantes :<br />
+  − Les autres risques sont aujourd'hui limités grâce aux mesures déjà prises. Il s'agit de risques : <span style="text-decoration: underline;"><br />
+  *résiduels de contamination.</span> Ils continuent de diminuer avec les progrès des connaissances et des techniques. Les estimations de L'Institut National de Veille Sanitaire (INVS) pour 2005 sont les suivantes :<br />
   − 1 risque d'infection bactérienne pour 125.000 poches transfusées.<br />
   − 1 infection par le virus de l'hépatite B (VHB) pour plus de 2 millions de dons de sang.<br />
   − 1 infection par le virus du Sida (VIH) pour près de 4 millions de dons de sang.<br />
@@ -41,7 +40,8 @@
 <p style="text-align: center;"><strong><span style="color: #ff0000;">Conservez ce document avec soin et montrez-le à votre médecin traitant : il en a besoin pour assurer votre suivi médical.</span></strong></p>
 <p style="text-align: justify;">− En fonction de l'évolution des connaissances scientifiques, il pourrait être important de re-contacter les personnes transfusées. C'est pourquoi, il est utile que vous informiez de la transfusion votre médecin traitant, notamment si vous en changez.<br />
 − Il est utile d'informer le médecin qui vous a transfusé de vos changements de domicile ou de lieu de traitement.</p>
-</div>
 <?php include("../include/pied.php");?>
+</div>
+
 </body>
 </html>

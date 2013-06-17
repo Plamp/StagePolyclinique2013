@@ -3,10 +3,8 @@
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
 <body>
-<div id="divleft"></div><div id="divright">
-</div>
-<div id="divmiddle">
-<strong>HAD :</strong> Hôpital A Domicile des Alpes du Sud, Quand l'Hôpital vient à vous…
+
+
 <p style="text-align: center;"><img title="Hospitalisation à domicile." src="../image/logo_had_05.jpg" alt="" width="500" height="307" /></p>
 <p style="text-align: justify;">Groupement de Coopération Sanitaire (GCS), l'Hôpital A Domicile des Alpes du Sud est un établissement de santé à part entière co-administré par les Centres Hospitaliers de Briançon, d'Embrun, de Gap/ Sisteron et la Polyclinique des Alpes du Sud.</p>
 <p style="text-align: justify;">Bénéficier à domicile de la même qualité de prise en charge qu'à l'hôpital, c'est ce que permet aujourd'hui l'HAD dans le département des Hautes-Alpes et le nord du département des Alpes de Haute-Provence.</p>
@@ -81,8 +79,10 @@ Une infirmière assure une astreinte 24H/24 et 7J/7 et se déplace au domicile d
 <strong><br />V</strong> Valavoire / Valbelle / Val-des-Prés / Valernes / Vallouise / Valserres / Vars / Vaumeilh / Ventavon / Venterol / Veynes / Villar-d'Arêne / Villar-Loubière / Villar-Saint-Pancrace / Vitrolles / Volonne.</p>
 <p style="text-align: center;"><img  title="Hospitalisation à domicile." src="../image/logo_had_05.jpg" alt="" width="500" height="307" /></p>
 <p style="text-align: center;"><strong>Tél.</strong> 04.92.40.15.51 - <strong>Fax.</strong> 04.86.06.03.49</p>
-<p style="text-align: center;"><strong>Courriel :</strong> had@clinalpsud.com</p>
+<p style="text-align: center;"><img src="../Image/courrielhad.jpg"></p>
 <p style="text-align: center;">Notre équipe se tient à votre disposition pour vous conseiller ou vous informer.</p>
+<?php include("../include/pied.php");?>
+
 </div>
 </body>
 </html>

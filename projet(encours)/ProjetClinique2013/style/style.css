@@ -1,21 +1,46 @@
 <style type="text/css">
 html {
 	height:100%;
-}
+	width: 100%;
+	max-width:100%;
+	background-position:center;
+	background-repeat:no-repeat;
+	background-image:url(../Image/fondsiteclinique.jpg);
+	background-attachment:fixed;
+
+};
+body{
+height:100%;
+	width: 100%;
+	max-width:100%;
+	font-family:tahoma,arial,sans-serif;
+	font-size:0.8em;
+	color:#000000;
+	 margin: 0; 
+	 height: 100%;
+
+	}
+
 div#footer{
-width:auto;
-background-color:#AADBE2;
-border-top:dashed 1px #cccccc;
-padding:10px;
+width:100%;
+height:40px;
+
+padding-top:10px;
 text-align:center;
+bottom:0;
 color:#777777;
-font-size:95%
+
+font-size:95%;
+
+
+
 }
 
 div#footer a:link,div#footer a:visited,divfooter a:active{
 text-decoration:none;
 color:#777777;
 font-weight:normal
+
 }
 
 div#footer a:hover{
@@ -23,16 +48,6 @@ div#footer a:hover{
 	font-weight:normal
 	}
 	
-body{
-	background :#AADBE2;
-	font-family:tahoma,arial,sans-serif;
-	font-size:0.8em;
-	color:#000000;
-	 margin: 0; 
-	 height: 100%;
-	 position: relative;
-
-	}
 	
 	div#divleft
 	{
@@ -55,117 +70,86 @@ div#divright{
 div#divmiddle{
 
     /* image */
-		padding-left:10%;
-	padding-right:10%;
+	padding-left:17%;
+	padding-right:17%;
 	height: 100%;
 	
-    margin: auto; /* se placera automatiquement entre les deux */
+  /* se placera automatiquement entre les deux */
 }
 a:hover{
 	color:#000;
 	font-weight:audacieux;
-	text-decoration:underline
+	text-decoration:none;
 	}
 	
-	pre{
-	overflow:auto;
-	word-wrap:normal;
-	padding-bottom:1.5em;
-	overflow-y:hidden;w
-	idth:99%
-	}
-	
-abbr[title],acronym[title]{
-	border-bottom:1px dotted
-	}
-	hr{
-	display:block;
-	height:2px;
-	border:none;
-	margin:0.5em auto;
-	color:#cccccc;
-	background-color:#cccccc
-	}
 	
 a:link,a:visited,a:active{
 	color:#046F93;
 	font-weight:audacieux;
-	text-decoration:aucun;}
+	text-decoration:none;}
 
 
 div#menu{
-margin-left: auto;
-  margin-right: auto;	
+margin-top:-9;
+	margin-left:auto;
+margin-right:auto;
+ 
   position: absolute;
-  padding-left:10%;
-  padding-right:10%;
+  padding-left:5%;
+  padding-right:5%;
   width:100%;
   clear:both;
-}
+
+ }
+
 #menu ul {
-	 width:100%;
  margin:0;
  padding:0;
+ width:100%;
  list-style-type:none;
  text-align:center;
  }
 #menu li {
- float:left;
- width:auto;
- margin:auto;
+ float:left; /* place en ligne */
+width:170px;
  padding:0;
-  background-color:#30F;
+text-align: center;
+
+ }
+
+#menu li a {
+ display:block;
+ width:auto; /* largeur du menu de base */
+ color:#000;
+ text-decoration:none;
+ 
+ padding:0px;
+ }
+#menu li a:hover {
+ color:#045289;
+ }
+ 
+ #menu li.sousmenu
+ {
+	 border: 1px solid ;
+	 border-color:#000;
+	 font-size:16px;
+	 color:#045289;
+  background-color:#b8bddd;
      border-bottom-right-radius: 200px;
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border-bottom-left-radius: 200px;
-
- }
-#menu li ul li{
-	background-color:#30F;
-     border-bottom-right-radius: 200px;
-border-top-left-radius: 200px;
-border-top-right-radius: 200px;
-border-bottom-left-radius: 200px;
-}
-
-#menu li a {
- display:block;
- width:160;
- height:20;
- color:#FFF;
- padding:0px;
- 
-
- }
-#menu li a:hover {
- color:#6FF;
- height:20;
-
-
  }
  
- #menu ul li ul {
- display:none;
-
-
- } /* permet de faire disparaitre les sous menu de l'affichage */
+ #menu ul.niv1 {font-size:16px;}
  
- #menu ul li:hover ul {
- display:compact;
-
- }
+ #menu ul li ul {display:none;} /* permet de faire disparaitre les sous menu de l'affichage */
+ 
+#menu ul.niv1 li.sousmenu:hover ul.niv2, #menu ul.niv2 li.sousmenu:hover ul.niv3 {display:block;}
  /* fait apparaitre les sous-menu au passage de la souris */
-#menu li:hover ul li {
- float:none;
 
- }
+#menu li:hover ul li {float:none;}
  /* les places de manière verticale */
- div.header-image-container{
-	 position:relative;
-	 margin:0;
-	 padding:0;
-	 height:150px;
-	 }
  
 </style>

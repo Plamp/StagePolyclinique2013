@@ -154,9 +154,9 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
   					}
   					else
   					{
-		   $message.="<div style='align=left;font-size:0.8em;'><b>$libPartie</b></div>";
+		   $message.="<div style='align=left;font-size:0.8em;page-break-inside: avoid'><b>$libPartie</b>";
 		   $message.="<input type='hidden' name='idType' value=$idType>";	
-		   $message.='<fieldset style="border-style:solid;border-color:#000;">';
+		   $message.='<fieldset style="border-style:solid;border-color:#000;page-break-after: always">';
 		   $message.='<table border="1" style="width:600px;font-family:tahoma,arial,sans-serif;font-size:0.9em;">';
 		   $message.='<th style="border-left:hidden;height:10px">Questions</th>';
 		   $message.='<th style="font-size:0.7em;height:10px">Très satisfaisant</th>';
@@ -267,13 +267,13 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 				  //$message.="<br>";	
 		//fin boucle5
 		}
-		
+		$message.="</div>";
 $message.="</fieldset></body></html>";
  // fin message
 	  
-		   //if(mail('melindrae@gmail.com', 'Questionnaire de satisfaction - Hospitalisation n° '.$noQuestionnaireType, $message, $headers)) 
+		   if(mail('melindrae@gmail.com', 'Questionnaire de satisfaction - Hospitalisation n° '.$noQuestionnaireType, $message, $headers)) 
 		   //if(mail('plampson@clinalpsud.com', 'Questionnaire de satisfaction - prestation de restauration n° '.$noQuestionnaireType, $message, $headers)) 
-		      if(mail('accueil@clinalpsud.com', 'Questionnaire de satisfaction - prestation de restauration n° '.$noQuestionnaireType, $message, $headers)) 
+		     // if(mail('accueil@clinalpsud.com', 'Questionnaire de satisfaction - prestation de restauration n° '.$noQuestionnaireType, $message, $headers)) 
 		   { 
 				echo 'Le message a bien été envoyé'; 
 		   } 

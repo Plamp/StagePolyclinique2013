@@ -56,3 +56,18 @@ libSatisfaction varchar(255),
 CONSTRAINT pk_Satisfaction Primary key (noQuestionnaire,idPartie,idLigneContenu,idType),
 Foreign key (idPartie,idType,idLigneContenu) References ContenuPartie(idPartie,idType,idLigneContenu),
 Foreign key (noQuestionnaire) References Affichage(noQuestionnaire))engine=InnoDb;
+
+Create table Utilisateur(
+idUtil smallint auto_increment primary key,
+logUtil varchar(40),
+mdpUtil varchar(12))engine=InnoDb;
+
+Create table CategorieHem(
+idCat smallint primary key,
+libCat varchar(60))engine=InnoDb;
+
+Create table Hem(
+idHem smallint auto_increment primary key,
+lienHem varchar(255),
+idCat smallint,
+Foreign key (idCat) References CategorieHem(idCat))engine=InnoDb;

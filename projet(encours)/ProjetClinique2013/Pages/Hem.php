@@ -3,9 +3,8 @@
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
 <body>
-<div id="divleft"></div><div id="divright">
-</div>
-<div id="divmiddle">
+
+<h2><center><strong>L'homme en mouvement :</strong></center></h2>
 <p style="text-align: center;">Réalisé par le <strong>Docteur Ivan PROTHOY</strong>, médecin du sport.</p>
 <p style="text-align: center;"><img class="aligncenter size-full wp-image-182" style="border: 1px solid black;" title="Dr. Ivan Prothoy." src="http://clinalpsud.fr/wp-content/uploads/2012/12/dr_ivan_prothoy.jpg" alt="" width="280" height="299" /></p>
 <p style="text-align: center;"><strong>Dr Ivan PROTHOY</strong>
@@ -18,9 +17,9 @@ Master STAPS "Physiologie et Biomécanique de l'Homme en mouvement".<span style=
 </span>Ancien médecin des équipes de France de snowboard.
 Médecin d'encadrement sur le terrain des équipes de France de ski alpin.</p>
 <p style="text-align: center;"><strong>Prise de rendez-vous en ligne 24h/24: </strong><a title="Prendre rendez-vous." href="http://www.olras.com/clients/prothoy/agenda" target="_blank">http://www.olras.com/clients/prothoy/agenda</a></p>
-<p style="text-align: center;"><strong>Tél. :</strong> <span style="background-color: #ffff00;">04 92 43 46 74</span></p>
+<p style="text-align: center;"><strong>Tél. :</strong> <span><b>04 92 43 46 74</b></span></p>
 <p style="text-align: center;"><span style="color: #ffffff;">.</span></p>
-<p style="text-align: center;"><strong>Différentes rubriques vous sont proposées :</strong> Épidémiologie, Traumatologie, Technique chirurgicale, Nutrition, Rééducation, Physiologie et cardiologie.</p>
+<p style="text-align: center;"><strong>Différentes rubriques vous sont proposées :</strong> </p>
 
 <strong>Epidémiologie :</strong><br> <br>
 - <a href="http://clinalpsud.fr/traumatismes-de-la-course-a-pied-2/" target="_blank">Traumatismes de la course à pied</a>.<br> 
@@ -80,6 +79,7 @@ Médecin d'encadrement sur le terrain des équipes de France de ski alpin.</p>
 - <a href="http://clinalpsud.fr/dopage-et-prescription-de-medicaments/" target="_blank">Dopage et prescription de médicaments</a>.<br> 
 - <a href="http://clinalpsud.fr/sport-et-deficit-en-fer/" target="_blank">Déficit en fer</a>.<br> 
 - <a href="http://clinalpsud.fr/sport-et-grossesse/" target="_blank">Sport et grossesse</a>.<br> <br>
+<?php include("../include/pied.php");?>
 </div>
 </body>
 </html>
