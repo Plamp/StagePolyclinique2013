@@ -51,6 +51,12 @@ Afin d'améliorer les services proposés par la Polyclinique, vous pouvez télé
 - <a href="../pdf/questionnaire_satisfaction_hospi.pdf" target="_blank">Questionnaire hospitalisation</a>.<br>
 - <a href="../pdf/questionnaire_satisfaction_ambu.pdf" target="_blank">Questionnaire ambulatoire</a>.<br>
 - <a href="../pdf/questionnaire_satisfaction_repas.pdf" target="_blank">Questionnaire restauration</a>.<br>
+<br>
+Ou alors les compléter sur notre site internet :<br>
+- <a href="../Formulaires/FormHospi.php" target="_blank">Questionnaire hospitalisation</a>.<br>
+- <a href="../Formulaires/formAmbu.php" target="_blank">Questionnaire ambulatoire</a>.<br>
+- <a href="../Formulaires/formRestau.php" target="_blank">Questionnaire restauration</a>.<br>
+
 <?php include("../include/pied.php");?>
 </div>
 </body>

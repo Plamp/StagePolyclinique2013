@@ -220,9 +220,9 @@ Insert into Lit values("A14F","A14");
 
 -- Implémentation des valeurs de la relation TypeQuestionnaire :
 
-Insert into TypeQuestionnaire values("ambu","questionnaire ambulatoire");
-Insert into TypeQuestionnaire values("repas","questionnaire repas");
-Insert into TypeQuestionnaire values("hospi","questionnaire hospitalisation");
+Insert into TypeQuestionnaire values("ambu","questionnaire ambulatoire","../Formulaires/formAmbu.php",true);
+Insert into TypeQuestionnaire values("repas","questionnaire repas","../Formulaires/formRestau.php",true);
+Insert into TypeQuestionnaire values("hospi","questionnaire hospitalisation","../Formulaires/formHospi.php",true);
 
 -- Implémentation des valeurs de la relation Partie :
 

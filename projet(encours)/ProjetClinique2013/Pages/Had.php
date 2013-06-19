@@ -5,7 +5,7 @@
 <body>
 
 
-<p style="text-align: center;"><img title="Hospitalisation à domicile." src="../image/logo_had_05.jpg" alt="" width="500" height="307" /></p>
+<p style="text-align: center;"><img title="Hospitalisation à domicile." src="../Image/logo_had_05.jpg" alt="" width="500" height="307" /></p>
 <p style="text-align: justify;">Groupement de Coopération Sanitaire (GCS), l'Hôpital A Domicile des Alpes du Sud est un établissement de santé à part entière co-administré par les Centres Hospitaliers de Briançon, d'Embrun, de Gap/ Sisteron et la Polyclinique des Alpes du Sud.</p>
 <p style="text-align: justify;">Bénéficier à domicile de la même qualité de prise en charge qu'à l'hôpital, c'est ce que permet aujourd'hui l'HAD dans le département des Hautes-Alpes et le nord du département des Alpes de Haute-Provence.</p>
 <p style="text-align: justify;">L'HAD s'adresse à des patients de tous âges, atteints de pathologies graves, aiguës ou chroniques, évolutives et/ou instables qui, en l'absence d'un tel service, seraient hospitalisés en établissement de santé.</p>
@@ -59,7 +59,7 @@ A partir de cette évaluation pluridisciplinaire et collective de la demande, la
 Une infirmière assure une astreinte 24H/24 et 7J/7 et se déplace au domicile dès que nécessaire. Parallèlement à ce dispositif, les médecins coordonnateurs de l'HAD assurent une astreinte médicale 24h/24.</p>
 &nbsp;
 <p style="text-align: center;"><strong>LES COMMUNES SUR LESQUELLES NOUS INTERVENONS.</strong></p>
-<p style="text-align: center;"> <img  style="border: 1px solid black;" title="Territoire d'intervention de l'HAD 05." src="../image/carte_had.jpg" alt="" width="656" height="493" /></p>
+<p style="text-align: center;"> <img  style="border: 1px solid black;" title="Territoire d'intervention de l'HAD 05." src="../Image/carte_had.jpg" alt="" width="656" height="493" /></p>
 <p style="text-align: justify;"><strong><br />A</strong> Abriès / Agnières-en-Dévoluy / Aiguilles / Ancelle / Antonaves / Arvieux / Aspremont / Aspres-lès-Corps / Aspres-sur-Buëch / Aubignosc / Authon / Avançon.
 <strong><br />B</strong> Baratier / Barcelonnette / Barcillonnette / Barret-sur-Méouge / Bayons / Bellaffaire / Bénévent-et-Charbillac / Bevons / Bréziers / Briançon / Bruis / Buissard.
 <strong><br />C</strong> Ceillac / Cervières / Chabestan / Chabottes / Champcella / Champoléon / Chanousse / Château-Arnoux-Saint-Auban / Châteaufort / Châteauneuf-de-Chabre / Châteauneuf-d'Oze Châteauneuf-Miravail / Châteauneuf-Val-Saint-Dona / Châteauroux-les-Alpes / Châteauvieux / Château-Ville-Vieille / Chauffayer / Chorges / Clamensane / Claret / Crévoux / Crots / Curbans / Curel.
@@ -77,7 +77,7 @@ Une infirmière assure une astreinte 24H/24 et 7J/7 et se déplace au domicile d
 <strong><br />T</strong> Tallard / Théus / Thèze / Trescléoux / Turriers.
 <strong><br />U</strong> Upaix / Uvernet-Fours.
 <strong><br />V</strong> Valavoire / Valbelle / Val-des-Prés / Valernes / Vallouise / Valserres / Vars / Vaumeilh / Ventavon / Venterol / Veynes / Villar-d'Arêne / Villar-Loubière / Villar-Saint-Pancrace / Vitrolles / Volonne.</p>
-<p style="text-align: center;"><img  title="Hospitalisation à domicile." src="../image/logo_had_05.jpg" alt="" width="500" height="307" /></p>
+<p style="text-align: center;"><img  title="Hospitalisation à domicile." src="../Image/logo_had_05.jpg" alt="" width="500" height="307" /></p>
 <p style="text-align: center;"><strong>Tél.</strong> 04.92.40.15.51 - <strong>Fax.</strong> 04.86.06.03.49</p>
 <p style="text-align: center;"><img src="../Image/courrielhad.jpg"></p>
 <p style="text-align: center;">Notre équipe se tient à votre disposition pour vous conseiller ou vous informer.</p>

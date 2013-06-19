@@ -6,7 +6,7 @@
 	header ("Content-type: image/png");
 	$image = imagecreate(70,20);
 
-	// Définition des couleur et coloriage du fond en noir
+	// Définition des couleurs et coloriage du fond en noir
 	$noir  = imagecolorallocate($image, 0, 0, 0);
 	$blanc = imagecolorallocate($image, 255, 255, 255);
 	$gris  = imagecolorallocate($image, 150, 150, 150);
@@ -14,7 +14,7 @@
 	// Le nombre de ligne est pour le moment de zéro
 	$nb = 0;
 
-	// On va dessinné ligne par ligne jusqu'a 7
+	// On va dessinner ligne par ligne jusqu'a 7
 	while ( $nb < 7 ) {
 
 		// On défini le point de départ et d'arrivé en X
@@ -42,7 +42,7 @@
 		// On dessine la ligne
 		ImageLine ($image, $xd, $yd, $xa, $ya, $gris);
 
-		// Et on prépar pour la lign suivante
+		// Et on prépare pour la ligne suivante
 		$nb++;
 	}
 

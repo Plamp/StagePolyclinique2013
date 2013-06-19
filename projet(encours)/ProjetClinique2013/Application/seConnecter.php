@@ -39,7 +39,7 @@ if(isset($_POST['connect']) && ($_POST['connect']=="Valider"))
 		}
 		elseif($id==3)
 		{
-				header('Location:/projects/ProjetClinique2013/Application/HEM/GestionHEM.php');
+				header('Location:/ProjetClinique2013/Application/HEM/GestionHEM.php');
 		}
 		
 	//fin de la boucle de test	
@@ -55,6 +55,7 @@ if(isset($_POST['connect']) && ($_POST['connect']=="Valider"))
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Connexion</title>
 </head>
+<body>
 <form name="Connexion" method="post" action="">
 <fieldset style="vertical-align:central;text-align:center">
 <h1> Veuillez vous connectez pour continuer</h1>
@@ -70,6 +71,6 @@ if(isset($_POST['connect']) && ($_POST['connect']=="Valider"))
 
 </fieldset>
 </form>
-<body>
+
 </body>
 </html>

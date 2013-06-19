@@ -60,7 +60,7 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 	$reqInsertAffi="Insert into Affichage values(null,'$dateEntree','$dateSaisie','$idService','$idChambre','$idType')";
 	$resInsertAffi=mysql_query($reqInsertAffi);
 	//Recupération du n° de questionnaire
-	$reqNoQuest="Select max(noQuestionnaire) as noQuestionnaire from Affichage";
+	$reqNoQuest="Select count(noQuestionnaire) as noQuestionnaire,idType from Affichage where idType='$idType' group by idType";
 	$resNoQuest=mysql_query($reqNoQuest);
 	while($LigneAffi=mysql_fetch_array($resNoQuest))
 		{
@@ -381,29 +381,29 @@ $xajax->printJavascript(); /* Affiche le Javascript */
   while($maLigne1=mysql_fetch_array($res1))
   {
 	  echo "<br>";
-  $idPartie=$maLigne1["idPartie"];
-  $libPartie=$maLigne1["libPartie"];
-  $idType=$maLigne1["idType"];
-  echo "<p align='left'><b>$libPartie</b></p>";
- echo "<input type='hidden' name='idType' value=$idType>";
+  	$idPartie=$maLigne1["idPartie"];
+  	$libPartie=$maLigne1["libPartie"];
+  	$idType=$maLigne1["idType"];
+  	echo "<p align='left'><b>$libPartie</b></p>";
+ 	echo "<input type='hidden' name='idType' value=$idType>";
   
-  ?>
-  <fieldset style="border-style:solid;border-color:#000;">
+  	?>
+  	<fieldset style="border-style:solid;border-color:#000;">
     <table border="1">
       
-        <th style="border-left:hidden">Veuillez indiquer votre satisfaction sur:</th>
-        <th>Très satisfaisant</th>
-        <th>Satisfaisant</th>
-        <th>Peu satisfaisant</th>
-        <th>Non satisfaisant</th>
-        <th>Sans Avis</th>
-        <?php
-  //_____________________________________________________________________________________________________________________//
-  //-----------------------------------------------Gestion des contenus--------------------------------------------------//
-  //_____________________________________________________________________________________________________________________//
+    <th style="border-left:hidden">Veuillez indiquer votre satisfaction sur:</th>
+    <th>Très satisfaisant</th>
+    <th>Satisfaisant</th>
+    <th>Peu satisfaisant</th>
+    <th>Non satisfaisant</th>
+    <th>Sans Avis</th>
+    <?php
+  	//_____________________________________________________________________________________________________________________//
+  	//-----------------------------------------------Gestion des contenus--------------------------------------------------//
+  	//_____________________________________________________________________________________________________________________//
  
-  $req2="select * from ContenuPartie where idPartie='$idPartie' and idType='$type'";
-  $res2=mysql_query($req2);
+  	$req2="select * from ContenuPartie where idPartie='$idPartie' and idType='$type'";
+  	$res2=mysql_query($req2);
 		while($maLigne2=mysql_fetch_array($res2))
 			{
 			echo "<tr>";
@@ -424,9 +424,9 @@ $xajax->printJavascript(); /* Affiche le Javascript */
 				 echo "</table> <table border='1'>
 		 		<p align='left'>$contenu
 		 		<textarea name='$idPartie$idLigne$idType'  style='width:1200;@charset UTF-8; height:50' ></textarea></p>";
-	 			}
+	 			 }
 	 		else // sinon :
-	 			{
+	 			 {
 				echo "<td style='width:500;'>$contenu</td>
 				<td align='center'><input type='radio' name='$idPartie$idLigne$idType' value='Tres satisfaisant'></td>
 				<td align='center'><input type='radio' name='$idPartie$idLigne$idType'  value='Satisfaisant'></td>
@@ -436,10 +436,11 @@ $xajax->printJavascript(); /* Affiche le Javascript */
 				"; 
 	 			}
 			}
-		}
+		
 	?>
     </table>
-  </fieldset>
+  </fieldset><?php
+  }?>
   <br>
   <p align="center"><u>Envoyer vos réponses</u>
     <input type="submit" name="EnvoiRep" value="Envoyer">

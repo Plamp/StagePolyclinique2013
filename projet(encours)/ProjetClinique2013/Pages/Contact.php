@@ -56,7 +56,7 @@ $chaine2='';
 	echo "$contenu";
 }?></textarea></center><br />
 
-	<center><img src="../captcha/captcha.php" /></center><br />
+	<center><img src="../Captcha/captcha.php" /></center><br />
 <?php
 
 //_____________________________________________________________________________________________________________________________________//

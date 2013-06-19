@@ -9,7 +9,7 @@
 		$_SESSION['captcha'] = '';
 	}
 	
-	// On pr�pare la liste de caractère a inséré dans le captcha
+	// On prépare la liste de caractère a inséré dans le captcha
 	$chaine = array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','1','2','3','4','5','6','7','8','9');
 
 	// On pr�pare le compteur de caract�re
@@ -60,7 +60,7 @@ Responsable des Ressources Humaines.</br>
 	echo "$contenu";
 }?></textarea></center><br />
 
-	<center><img src="../captcha/captcha.php" /></center><br />
+	<center><img src="../Captcha/captcha.php" /></center><br />
 <?php
 
 //_____________________________________________________________________________________________________________________________________//
@@ -112,7 +112,7 @@ if(isset ($captchacrypte) && isset($_POST['captcha']))
 
 <?php //---------------------------------------------------------------------------------------------------------------//?>
 <p style="text-align: center;"><span style="color: #ffffff;">.</span></p>
-<p style="text-align: center;"><img style="border: 1px solid black;" title="Polyclinique des Alpes du Sud." src="../image/07.jpg" alt="" width="800" height="362" /></p>
+<p style="text-align: center;"><img style="border: 1px solid black;" title="Polyclinique des Alpes du Sud." src="../Image/07.jpg" alt="" width="800" height="362" /></p>
 <p style="text-align: justify;"><span style="color: #000000;">Cette page est mise à jour régulièrement. Si aucune offre ne correspond à votre recherche, vous pouvez nous faire parvenir une candidature spontanée.</span></p>
 <?php include("../include/pied.php");?>
 </div>

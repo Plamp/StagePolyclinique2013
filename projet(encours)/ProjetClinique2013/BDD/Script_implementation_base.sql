@@ -1,5 +1,7 @@
+
+
 Drop database if exists Questionnaire;
-create database Questionnaire CHARACTER SET utf8;
+create database Questionnaire CHARACTER SET utf-8;
 use Questionnaire;
 
 Create table Service(
@@ -8,7 +10,9 @@ libService varchar(40))engine=InnoDB;
 
 Create table TypeQuestionnaire(
 idType varchar(6) primary key, 
-libType varchar(40))engine=InnoDB;
+libType varchar(40),
+lien varchar(255),
+active boolean default false)engine=InnoDB;
 
 Create table Partie(
 idPartie smallint,
@@ -63,11 +67,12 @@ logUtil varchar(40),
 mdpUtil varchar(12))engine=InnoDb;
 
 Create table CategorieHem(
-idCat smallint primary key,
+idCat smallint auto_increment primary key,
 libCat varchar(60))engine=InnoDb;
 
 Create table Hem(
 idHem smallint auto_increment primary key,
+TitreHem varchar(120) default"titre non defini",
 lienHem varchar(255),
 idCat smallint,
 Foreign key (idCat) References CategorieHem(idCat))engine=InnoDb;

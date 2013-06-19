@@ -290,6 +290,7 @@ $message.="</fieldset></body></html>";
   <head><!-------------------------------------------------------Head------------------------------------------------->
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php 
+
 $xajax->printJavascript(); /* Affiche le Javascript */
   include ("../include/entete.php");
   include ("../style/style.css");

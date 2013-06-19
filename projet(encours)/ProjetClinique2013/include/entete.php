@@ -17,7 +17,7 @@
     </ul>
     </li>
       <li class="sousmenu" ><a href="../pages/Poly.php">Les grandes dates</a></li>
-      <li class="sousmenu"><a href="../pages/com&com.php">Commités et Commissions</a>
+      <li class="sousmenu"><a href="../pages/Com&com.php">Commités et Commissions</a>
   <ul class="niv2">
       <li ><a href="../pages/Hemovigilance.php">Hémovigilance</a></li>
     </ul>
@@ -37,7 +37,7 @@
     </li>
 </ul>
 </div> 
-   <center> <a href="../Pages/index2.php"><img src="../Image/logopoursiterefait.png" alt="Polyclinique des Alpes du Sud." /></a></center>
+   <center><img src="../Image/logopoursiterefait.png" alt="Polyclinique des Alpes du Sud." /></center>
 		</ul>
 </div>
 
