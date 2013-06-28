@@ -1,4 +1,4 @@
-<?php 
+<?php
   include ("../include/connexion.php");
   //________________________________________________________________________________________________________________//
   //----------------------------Affichage de la liste "Chambre" sans rafraichissement-------------------------------//
@@ -6,13 +6,13 @@
   
   function AfficherChambre($id)
 {
-$reponse = new xajaxResponse();//Création d'une instance de xajaxResponse pour traiter les réponses serveur
+$reponse = new xajaxResponse();//Cr�ation d'une instance de xajaxResponse pour traiter les r�ponses serveur
 
 $Chambre='';// Initialisation de la variable $Chambre
 //la selection des Chambres selon le code du service choisis
 $req = mysql_query("SELECT `idChambre` FROM `Chambre` where idService='".$id."' ORDER BY idChambre") or die(mysql_error()); 
 
-$Chambre .='<p style="font-size:20px"><u>Chambre :</u><select name="idChambre" id="Chambre"></p>'; // on commence la declaration de la liste des Chambres
+$Chambre .='<p><u>Chambre :</u><select name="idChambre" id="Chambre"></p>'; // on commence la declaration de la liste des Chambres
 $Chambre .='<option value="00">Selectionnez votre Chambre</option>';
 
   while($array = mysql_fetch_array($req))
@@ -32,13 +32,13 @@ return $reponse->getXML();
 require("xajax.inc.php");
 $xajax = new xajax(); //On initialise l'objet xajax
 $xajax->setCharEncoding('UTF-8');
-$xajax->decodeUTF8InputOn();
+//$xajax->decodeUTF8InputOn();
 $xajax->registerFunction("AfficherChambre");
 $xajax->processRequests();//Fonction qui va se charger de faire les requetes APRES AVOIR DECLARER NOS FONCTIONS
 ?>
 <script language="javascript">
 function selectionne(pValeur, pSelection,  pObjet) {
-	//active l'objet pObjet du formulaire si la valeur sélectionnée (pSelection) est égale à la valeur attendue (pValeur)
+	//active l'objet pObjet du formulaire si la valeur s�lectionn�e (pSelection) est �gale � la valeur attendue (pValeur)
 	if (pSelection==pValeur) 
 	{ formRAPPORT_VISITE.elements[pObjet].disabled=false; }
 	else { formRAPPORT_VISITE.elements[pObjet].disabled=true; }
@@ -59,14 +59,14 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 	// insertion des données d'affichage.
 	$reqInsertAffi="Insert into Affichage values(null,'$dateEntree','$dateSaisie','$idService','$idChambre','$idType')";
 	$resInsertAffi=mysql_query($reqInsertAffi);
-	//Recupération du n° de questionnaire
-	$reqNoQuest="Select count(noQuestionnaire) as noQuestionnaire,idType from Affichage where idType='$idType' group by idType";
+	//Recup�ration du n° de questionnaire
+	$reqNoQuest="Select max(noQuestionnaire) as noQuestionnaire from Affichage";
 	$resNoQuest=mysql_query($reqNoQuest);
 	while($LigneAffi=mysql_fetch_array($resNoQuest))
 		{
 		$noQuestionnaire=$LigneAffi["noQuestionnaire"];
 		}
-	//récupération des information rentrée dans le formulaire automatisé.
+	//r�cup�ration des information rentrée dans le formulaire automatis�.
 	$reqSelectPartie="Select * from Partie where idType='$idType'";
 	$resSelectPartie=mysql_query($reqSelectPartie);
 	//boucle1
@@ -93,8 +93,8 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 	//____________________________________________________________________________________________________________________//
 	//------------------------------------------------Envoi de la reponse-------------------------------------------------//
 	//____________________________________________________________________________________________________________________//
-	  $headers ='From: "Babar"<ElephantMan@bisounours.com>'."\n"; 
-	  $headers .='Content-Type: text/html; charset="UTF-8"'."\n"; 
+	  $headers ='From: "SiteWeb"<siteweb@clinalpsud.com>'."\n"; 
+	  $headers .='Content-type: text/html; charset=UTF-8'."\n"; 
 	  $headers .='Content-Transfer-Encoding: 8bit'; 
 	   $reqCountNo="Select count(noQuestionnaire) as no,idType from Affichage where idType='$idType' group by idType";
 		 $resCountNo=mysql_query($reqCountNo);
@@ -103,7 +103,7 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 			 $noQuestionnaireType=$maLigne3["no"];
 		 }
 	  //debut du message
-	  $message="<html><body><fieldset style='background :#AADBE2;font-family:tahoma,arial,sans-serif;font-size:0.85em;'>";
+	  $message="<html><body><fieldset style='background :#DCDEED;font-family:tahoma,arial,sans-serif;font-size:0.85em;'>";
 	 //   $message.="<br />";
 	//	  $message.="<br />";
 	  //-------------------------------------------------------------------------------//
@@ -117,7 +117,7 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 	  $message.="<table border=0><tr>";
 	  $message.="<td style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>Service :</td><td><input type='text' name=idService size='10' value='$libService' disabled/></td> ";
 	  $message.="<td style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>Chambre :</td><td><input type='text' name='idChambre' value='$idChambre' size='5' disabled/></td>";
-	  $message.="<td style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>Date d'entrée :</td><td><input type='text' name='dateEntree' size='11'disabled value='$dateSaisie'></td></tr></table>";
+	  $message.="<td style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>Date d'entr&eacute;e :</td><td><input type='text' name='dateEntree' size='11'disabled value='$dateSaisie'></td></tr></table>";
 	  //______________________________________________________________________________________________________________________//
 	  //----------------------------------------------Codage spécifique:premier menu------------------------------------------//
 	  //______________________________________________________________________________________________________________________//
@@ -133,12 +133,12 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 		$contenu=$maLigne["libContenu"];
 		$idPartie=$maLigne["idPartie"];
 		$idType=$maLigne["idType"];
-		$reqRechercheSati="select * from satisfaction where	idPartie=$idPartie and idLigneContenu=$idLigne and noQuestionnaire=$noQuestionnaire";
+		$reqRechercheSati="select * from Satisfaction where idPartie=$idPartie and idLigneContenu=$idLigne and noQuestionnaire=$noQuestionnaire";
 		$resRechercheSati=mysql_query($reqRechercheSati);
 		//boucle4
 		while($ligneSati=mysql_fetch_array($resRechercheSati))
 			{
-			$message.="<tr><td>$contenu</td>";
+				$message.="<tr><td>$contenu</td>";
 		 	$reponse=$ligneSati["libSatisfaction"];
 			if ($reponse=="Oui")
 				{
@@ -172,11 +172,12 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 		   $message.='<fieldset style="border-style:solid;border-color:#000;">';
 		   $message.='<table border="1" style="width:600px;font-family:tahoma,arial,sans-serif;font-size:0.9em;">';
 		   $message.='<th style="border-left:hidden">Questions</th>';
-		   $message.='<th>Très satisfaisant</th>';
+		   $message.='<th>Tr&egrave;s satisfaisant</th>';
 		   $message.='<th>Satisfaisant</th>';
 		   $message.='<th>Peu satisfaisant</th>';
 		   $message.='<th>Non satisfaisant</th>';
 		   $message.='<th>Sans Avis</th>';
+		   $i=0;
 		//_____________________________________________________________________________________________________________________//
 		//-----------------------------------------------Gestion des contenus--------------------------------------------------//
 		//_____________________________________________________________________________________________________________________//
@@ -187,16 +188,24 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 				{
 				$idLigne=$maLigne2["idLigneContenu"];
 				$contenu=$maLigne2["libContenu"];
-				$reqSelectSatisAuto="Select  * from satisfaction where idPartie=$idPartie and idLigneContenu=$idLigne and noQuestionnaire=$noQuestionnaire";
+				$reqSelectSatisAuto="Select  * from Satisfaction where idPartie=$idPartie and idLigneContenu=$idLigne and noQuestionnaire=$noQuestionnaire";
 				$resSelectSatisAuto=mysql_query($reqSelectSatisAuto);
 				  //boucle 7
 				  while($SelectSatisAuto=mysql_fetch_array($resSelectSatisAuto))
-				  {	
-				  	  $message.="<tr>";
+				  {
+					  $i=$i+1;
+					  if ($i%2==1)
+					  {
+					  $message.="<tr style='background-color:#CCCCFF'>";
+					  }
+					  else
+					  {
+						  $message.="<tr style='background-color:#9999FF'>";
+					  }
 					  $reponse=$SelectSatisAuto["libSatisfaction"];
 				   	  if((preg_match("/[$?]/",$contenu))) // si le contenu est une question alors :
 						{
-						$message.="<td  style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>$contenu</td>";
+						$message.="<td  style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>". utf8_encode('$contenu')."</td>";
 						if ($reponse=="Oui")
 							{
 							$message.="<td>Oui<input type='radio'  name='$idPartie$idLigne$idType' checked value='Oui'></td>";
@@ -212,12 +221,12 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 
 						{
 							$message.="</table> ";
-							$message.="<p align='left'>$contenu";
+							$message.="<p align='left'>". $contenu;
 							$message.="<textarea name='$idPartie$idLigne$idType'  style='width:400px;color:#000000;height:35px;font-family:tahoma,arial,sans-serif;font-size:0.85em;' disabled >$reponse</textarea></p>";
 						}
 						else // sinon :
 						{
-							$message.="<td  style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>$contenu</td>";
+							$message.="<td  style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>".$contenu."</td>";
 							if ($reponse=="Tres satisfaisant")
 								{
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' checked value='Tres satisfaisant'></td>";
@@ -273,15 +282,21 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 $message.="</fieldset></body></html>";
  // fin message
 	  
-		   if(mail('melindrae@gmail.com', 'Questionnaire de satisfaction - restauration n° '.$noQuestionnaireType, $message, $headers)) 
-		   //if(mail('plampson@clinalpsud.com', 'Questionnaire de satisfaction - prestation de restauration n° '.$noQuestionnaireType, $message, $headers)) 
-		   { 
-				echo 'Le message a bien été envoyé'; 
-		   } 
-		   else 
-		   { 
-				echo 'Le message n\'a pu être envoyé'; 
-		   } 
+		  if (mail('froux@clinalpsud.com', 'Questionnaire de satisfaction - restauration num&eacute;ro '.$noQuestionnaireType, $message, $headers))
+		  {
+			echo '<script language="Javascript">
+			<!--
+			document.location.replace("../index.php");
+		// -->
+		// // </script>';  
+		  }
+		  else
+		  {
+			  echo "<h3>Veuillez saisir tout les champs SVP</h3>";
+		  }
+		  // mail('plampson@clinalpsud.com', 
+		//	   utf8_encode("Questionnaire de satisfaction - prestation de restauration n�") .$noQuestionnaireType, $message, $headers); 
+		 
 	  //fin if isset
 	  }
 
@@ -290,8 +305,8 @@ $message.="</fieldset></body></html>";
 <!-------------------------------------------------------Html------------------------------------------------->
 <head>
 <!-------------------------------------------------------Head------------------------------------------------->
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<?php 
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<?php
 $xajax->printJavascript(); /* Affiche le Javascript */
 
   include ("../include/entete.php");
@@ -315,7 +330,7 @@ $xajax->printJavascript(); /* Affiche le Javascript */
   $req = mysql_query("SELECT `idService`,`libService` FROM `Service` ORDER BY idService") or die(mysql_error()); 
   ?>
     <br>
-    <p style="font-size:20px"><u>service :</u>
+    <p><u>service :</u>
       <select name="idService" id="Service" onChange="xajax_AfficherChambre(document.getElementById('Service').value);">
         <option value="00">Selectionnez votre Service </option>
         <?php
@@ -339,12 +354,12 @@ $xajax->printJavascript(); /* Affiche le Javascript */
   ?>
   <input type="hidden" name="dateToday" value="<?=$date?>"/>
   <!-- date du jour-->
-  <p align="left">Date d'arrivé dans le service :
+  <p align="left"><?php echo utf8_encode("Date d'arriv�  dans le service :")?>
     <input type="date" name="dateArrive"/>
   </p>
   <?php
   //______________________________________________________________________________________________________________________//
-  //-------------------------------------------codage spécifique: premier tableau-----------------------------------------//
+  //-------------------------------------------codage sp�cifique: premier tableau-----------------------------------------//
   //______________________________________________________________________________________________________________________//
   ?>
   <table border="0">
@@ -371,7 +386,7 @@ $xajax->printJavascript(); /* Affiche le Javascript */
   //______________________________________________________________________________________________________________________//
   //--------------------------------------------Gestion du formulaire automatisé------------------------------------------//
   //______________________________________________________________________________________________________________________//
-  $type="repas"; // seule valeur à changer pour afficher les informations des formulaire.
+  $type="repas"; // seule valeur � changer pour afficher les informations des formulaire.
   $req1="select * from Partie where idType='$type' and idPartie!=1";
   $res1=mysql_query($req1);
   
@@ -392,7 +407,7 @@ $xajax->printJavascript(); /* Affiche le Javascript */
     <table border="1">
       
     <th style="border-left:hidden">Veuillez indiquer votre satisfaction sur:</th>
-    <th>Très satisfaisant</th>
+    <th><?php echo utf8_encode("Tr�s satisfaisant")?></th>
     <th>Satisfaisant</th>
     <th>Peu satisfaisant</th>
     <th>Non satisfaisant</th>
@@ -403,10 +418,19 @@ $xajax->printJavascript(); /* Affiche le Javascript */
   	//_____________________________________________________________________________________________________________________//
  
   	$req2="select * from ContenuPartie where idPartie='$idPartie' and idType='$type'";
-  	$res2=mysql_query($req2);
+	$res2=mysql_query($req2);
+	$i=0;
 		while($maLigne2=mysql_fetch_array($res2))
+		{
+			$i=$i+1;
+			if($i%2==1)
 			{
-			echo "<tr>";
+				echo "<tr style='background-color:#CCCCFF'>";
+			}
+			else
+			{
+				echo"<tr style='background-color:#9999FF'>";
+			}
 	    	$idLigne=$maLigne2["idLigneContenu"];
 			$contenu=$maLigne2["libContenu"];
 		
@@ -423,7 +447,7 @@ $xajax->printJavascript(); /* Affiche le Javascript */
 				 {
 				 echo "</table> <table border='1'>
 		 		<p align='left'>$contenu
-		 		<textarea name='$idPartie$idLigne$idType'  style='width:1200;@charset UTF-8; height:50' ></textarea></p>";
+		 		<textarea name='$idPartie$idLigne$idType'  style='height:50' ></textarea></p>";
 	 			 }
 	 		else // sinon :
 	 			 {
@@ -442,7 +466,7 @@ $xajax->printJavascript(); /* Affiche le Javascript */
   </fieldset><?php
   }?>
   <br>
-  <p align="center"><u>Envoyer vos réponses</u>
+  <p align="center"><u><?php echo utf8_encode("Envoyer vos r�ponses")?></u>
     <input type="submit" name="EnvoiRep" value="Envoyer">
   </p>
 </form>

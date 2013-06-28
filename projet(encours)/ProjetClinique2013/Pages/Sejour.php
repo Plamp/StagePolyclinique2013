@@ -3,6 +3,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
+<?php include("../include/connexion.php")?>
+<title>Votre s&eacute;jour</title>
 </head>
 <body>
 <h2><center><strong>Séjourner à la polyclinique</strong></center></h2>
@@ -52,12 +54,21 @@ Afin d'améliorer les services proposés par la Polyclinique, vous pouvez télé
 - <a href="../pdf/questionnaire_satisfaction_ambu.pdf" target="_blank">Questionnaire ambulatoire</a>.<br>
 - <a href="../pdf/questionnaire_satisfaction_repas.pdf" target="_blank">Questionnaire restauration</a>.<br>
 <br>
-Ou alors les compléter sur notre site internet :<br>
-- <a href="../Formulaires/FormHospi.php" target="_blank">Questionnaire hospitalisation</a>.<br>
-- <a href="../Formulaires/formAmbu.php" target="_blank">Questionnaire ambulatoire</a>.<br>
-- <a href="../Formulaires/formRestau.php" target="_blank">Questionnaire restauration</a>.<br>
+<?php 
+$reqSelectActive="select * from TypeQuestionnaire where active=true";
+$resSelectActive=mysql_query($reqSelectActive);
+if(mysql_num_rows($resSelectActive)>0)
+{
+	echo "Ou alors les compléter sur notre site internet :<br>";
+	while($maLigne=mysql_fetch_array($resSelectActive))
+	{
+		$lien=$maLigne["lien"];
+		$lib=$maLigne["libType"];
+		echo "-  <a href='$lien' target='_blank'>$lib</a>.<br>";
 
-<?php include("../include/pied.php");?>
+	}
+}
+ include("../include/pied.php");?>
 </div>
 </body>
 </html>

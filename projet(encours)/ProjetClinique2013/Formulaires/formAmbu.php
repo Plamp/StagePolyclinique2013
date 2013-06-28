@@ -60,7 +60,7 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 	  //debut du message
 	  $message="<html><head>";
 	  $message.="<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />";
-	  $message.="<body><fieldset style='background :#AADBE2;font-family:tahoma,arial,sans-serif;font-size:0.85em;'>";
+	  $message.="<body><fieldset style='background :#DCDEED;font-family:tahoma,arial,sans-serif;font-size:0.85em;'>";
 	  //-------------------------------------------------------------------------------//
 	  $reqNomService="Select libService from Service where idService='$idService'";
 	  $resNomService=mysql_query($reqNomService);
@@ -71,7 +71,7 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 	  //------------------------------------------------------------------------------//
 	  $message.="<table border=0><tr>";
 	  $message.="<td style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>Chambre :</td><td><input type='text' name='idChambre' value='$idChambre' size='5' disabled/></td>";
-	  $message.="<td style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>Date d'entrée :</td><td><input type='text' name='dateEntree' size='11'disabled value='$dateSaisie'></td></tr></table>";
+	  $message.="<td style='font-family:tahoma,arial,sans-serif;font-size:0.9em'>Date d'entr&eacute;e :</td><td><input type='text' name='dateEntree' size='11'disabled value='$dateSaisie'></td></tr></table>";
 	 
 		//______________________________________________________________________________________________________________________//
 		//--------------------------------------------Gestion du formulaire automatisé------------------------------------------//
@@ -97,7 +97,7 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 			   $message.="<br />";
 			   $message.="<br />";
 		   }
-		      //codage spécifique: gestion de la partie V.
+		      //codage sp�cifique: gestion de la partie V.
   			if ($idPartie ==5)
  				 {
  				 $message.="<div align='left'><b>$libPartie</b></span>";
@@ -109,11 +109,12 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 		   $message.='<fieldset style="border-style:solid;border-color:#000;">';
 		   $message.='<table border="1" style="width:600px;font-family:tahoma,arial,sans-serif;font-size:0.9em;">';
 		   $message.='<th style="border-left:hidden">Questions</th>';
-		   $message.='<th>Très satisfaisant</th>';
+		   $message.='<th>Tr&egrave;s satisfaisant</th>';
 		   $message.='<th>Satisfaisant</th>';
 		   $message.='<th>Peu satisfaisant</th>';
 		   $message.='<th>Non satisfaisant</th>';
 		   $message.='<th>Sans Avis</th>';
+		   $i=0;
 		//_____________________________________________________________________________________________________________________//
 		//-----------------------------------------------Gestion des contenus--------------------------------------------------//
 		//_____________________________________________________________________________________________________________________//
@@ -124,12 +125,20 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 				{
 				$idLigne=$maLigne2["idLigneContenu"];
 				$contenu=$maLigne2["libContenu"];
-				$reqSelectSatisAuto="Select  * from satisfaction where idPartie=$idPartie and idLigneContenu=$idLigne and noQuestionnaire=$noQuestionnaire";
+				$reqSelectSatisAuto="Select  * from Satisfaction where idPartie=$idPartie and idLigneContenu=$idLigne and noQuestionnaire=$noQuestionnaire";
 				$resSelectSatisAuto=mysql_query($reqSelectSatisAuto);
 				  //boucle 7
 				  while($SelectSatisAuto=mysql_fetch_array($resSelectSatisAuto))
-				  {	
-				  	  $message.="<tr>";
+				  {
+					  $i=$i+1;
+					  if($i%2==1)
+					  {	  
+				  	  $message.="<tr style='background-color:#CCCCFF'>";
+					  }
+					  else
+					  {
+					  $message.="<tr style='background-color:#9999FF'>";
+					  }
 					  $reponse=$SelectSatisAuto["libSatisfaction"];
 				   	  if((preg_match("/[$?]/",$contenu))) // si le contenu est une question alors :
 						{
@@ -139,17 +148,21 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 							$message.="<td align='center' style='border-style:hidden'>Oui</td>
 							<td align='center' style='border-style:hidden'><input type='radio'checked name='$idPartie$idLigne$idType' value='Oui'></td>";
 							$message.="<td align='center' style='border-style:hidden'>
-			Non </td> <td align='center' style='border-style:hidden'><input type='radio' name='$idPartie$idLigne$idType' value='Non'></td>	";
+			Non </td> <td align='center' style='border-style:hidden'><input type='radio' name='$idPartie$idLigne$idType'disabled value='Non'></td>	";
+							  echo"</tr>";
+
 							}
 					    else
 							{
 	$message.="<td align='center' style='border-style:hidden'>Oui</td>
-							<td align='center' style='border-style:hidden'><input type='radio' name='$idPartie$idLigne$idType' value='Oui'></td>";
+							<td align='center' style='border-style:hidden'><input type='radio'disabled name='$idPartie$idLigne$idType' value='Oui'></td>";
 							$message.="<td align='center' style='border-style:hidden'>
 			Non </td> <td align='center' style='border-style:hidden'><input type='radio'checked name='$idPartie$idLigne$idType' value='Non'></td>	";
+							  echo"</tr>";
+
 							}
 						}
-						elseif((preg_match("/[$:]/",$contenu)))// si le contenu est une remarque alors :
+						elseif((preg_match("/Remarques/",$contenu)))// si le contenu est une remarque alors :
 
 						{
 							$message.="</table> ";
@@ -166,6 +179,8 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType'disabled value='Peu satisfaisant'></td>";
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Non satisfaisant'></td>";	
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Sans Avis'></td>";	
+							  echo"</tr>";
+
 								}
 							elseif ($reponse=="Satisfaisant")
 								{
@@ -174,6 +189,8 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType'disabled value='Peu satisfaisant'></td>";
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Non satisfaisant'></td>";	
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Sans Avis'></td>";	
+							  echo"</tr>";
+
 								}
 							elseif ($reponse=="Peu satisfaisant")
 								{
@@ -182,7 +199,9 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType'checked value='Peu satisfaisant'></td>";
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Non satisfaisant'></td>";	
 								$message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Sans Avis'></td>";	
-								 }
+							        echo"</tr>";
+
+								}
 							elseif ($reponse=="Non satisfaisant")
 								  {
 								 $message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Tres satisfaisant'></td>";
@@ -190,6 +209,8 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 								 $message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType'disabled value='Peu satisfaisant'></td>";
 								 $message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' checked value='Non satisfaisant'></td>";	
 								 $message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Sans Avis'></td>";	
+								   echo"</tr>";
+
 								  }
 							 elseif($reponse=="Sans Avis")
 								 {
@@ -198,11 +219,15 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 								 $message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType'disabled value='Peu satisfaisant'></td>";
 								 $message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' disabled value='Non satisfaisant'></td>";	
 								 $message.="<td align='center'><input type='radio' name='$idPartie$idLigne$idType' checked value='Sans Avis'></td>";	
+								  echo"</tr>";
+
 								 }
+			
 						}
+
 				  //fin boucle 7
 				  }
-				  //fin codage spé
+				  //fin codage sp�
 				}
 				//fin boucle 6
 				}	
@@ -218,15 +243,18 @@ if (isset($_POST["EnvoiRep"]) and $_POST["EnvoiRep"]="Envoyer")
 $message.="</fieldset></body></html>";
  // fin message
 	  
-		  // if(mail('melindrae@gmail.com', 'Questionnaire de satisfaction - Ambulatoire n° '.$noQuestionnaireType, $message, $headers)) 
-		   if(mail('plampson@clinalpsud.com', 'Questionnaire de satisfaction - prestation de restauration n° '.$noQuestionnaireType, $message, $headers)) 
-		   { 
-				echo 'Le message a bien été envoyé'; 
-		   } 
-		   else 
-		   { 
-				echo 'Le message n\'a pu être envoyé'; 
-		   } 
+		if( mail('froux@clinalpsud.com', utf8_encode("Questionnaire de satisfaction - Ambulatoire num&eacute;ro ").$noQuestionnaireType, $message, $headers)) 
+		 {
+			echo '<script language="Javascript">
+			<!--
+			document.location.replace("../index.php");
+		// -->
+		// // </script>';  
+		  }
+		  else
+		  {
+			  echo "<h3>Veuillez saisir tout les champs SVP</h3>";
+		  }
 	  //fin if isset
 	  }
 
@@ -255,7 +283,7 @@ QUESTIONNAIRE DE SATISFACTION - SERVICE AMBULATOIRE
   $req = mysql_query("SELECT `idChambre` FROM `Chambre` where idService='ambu'") or die(mysql_error()); 
   ?>
   <br>
-  <p style="font-size:20px"><u>Chambre :</u><select name="idChambre" id="Chambre">
+  <p><u>Chambre :</u><select name="idChambre" id="Chambre">
   <option value="00">Selectionnez votre Chambre </option>
   
   <?php
@@ -324,9 +352,18 @@ QUESTIONNAIRE DE SATISFACTION - SERVICE AMBULATOIRE
  
   $req2="select * from ContenuPartie where idPartie='$idPartie' and idType='$type'";
   $res2=mysql_query($req2);
+  $i=0;
 		while($maLigne2=mysql_fetch_array($res2))
 		{
-			echo "<tr>";
+			$i=$i+1;
+			if($i%2==1)
+			{
+				echo "<tr style='background-color:#CCCCFF'>";
+			}
+			else
+			{
+				echo "<tr style='background-color:#9999FF'>";
+			}
 	    $idLigne=$maLigne2["idLigneContenu"];
 		$contenu=$maLigne2["libContenu"];
 		

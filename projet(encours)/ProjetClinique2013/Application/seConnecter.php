@@ -20,8 +20,12 @@ if(isset($_POST['connect']) && ($_POST['connect']=="Valider"))
 	$resIdentifiant=mysql_query($reqIdentifiant);
 	//si la requete ne renvoi pas de ligne
 	if(mysql_num_rows($resIdentifiant)==0){
-		
-			header('Location:avertissement.html');
+
+		echo '<script language="Javascript">
+			<!--
+			document.location.replace("avertissement.html");
+		// -->
+		// // </script>';
 		}
 		else
 		{
@@ -31,16 +35,32 @@ if(isset($_POST['connect']) && ($_POST['connect']=="Valider"))
 		$id=$ligneLog["idUtil"];
 		if ($id==1)
 		{
-			//header('Location:');
+		    echo '<script language="Javascript">
+		    <!--
+                    document.location.replace("./Admin/MenuApp.php");
+                    // -->
+                    // // </script>';
+		                    
 		}
 		elseif($id==2)
 		{
-				//header('Location:');
+		
+			echo '<script language="Javascript">
+				<!--
+				document.location.replace("./GestionQuest/GestionQuest.php");
+			// -->
+			// // </script>';
+		
 		}
 		elseif($id==3)
 		{
-				header('Location:/ProjetClinique2013/Application/HEM/GestionHEM.php');
-		}
+
+echo '<script language="Javascript">
+<!--
+document.location.replace("./HEM/GestionHEM.php");
+// -->
+// </script>';
+				}
 		
 	//fin de la boucle de test	
 	}

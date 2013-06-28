@@ -35,6 +35,8 @@ $chaine2='';
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
+<title>Nous contacter</title>
+</head>
 <body>
 
 <h2><center><strong>Nous contacter:</strong></center></h2>
@@ -49,7 +51,7 @@ $chaine2='';
 	$email=$_POST["email"];
 	echo "value='$email'";
 }?>/></center><br />
-<center>insérez le contenu de votre message:</center>
+<center>insérez le contenu de votre message (indiquez votre nom et numéro de telephone de préférence):</center>
 <center><textarea name="contenu" style="width:500px;height:100px" ><?php if(isset ($captchacrypte) && isset($_POST['captcha']))
 {
 	$contenu=$_POST["contenu"];
@@ -70,14 +72,15 @@ if(isset ($captchacrypte) && isset($_POST['captcha']))
 	{
 	if ( $captchacrypte == md5($_POST['captcha']) AND !empty($_POST['captcha']) ) {
 		$email=$_POST["email"];
-		$contenu=$_POST["contenu"];
+		$contenu="adresse mail de l'emetteur :".$email."<br />";
+		$contenu.=$_POST["contenu"];
 		//header du mail.
-		 $headers ='From:"Nous contacter"<'.$email.'>'."\n"; 
+		 $headers ='From:"Nous contacter"<siteweb@clinalpsud.com>'."\n"; 
 		 $headers .='Reply-To:'.$email. "\r\n";
 	  $headers .='Content-Type: text/html; charset="UTF-8"'."\n"; 
 	  $headers .='Content-Transfer-Encoding: 8bit'; 
 	  //envoi du mail
-	 if( mail('melindrae@gmail.com', 'Message depuis  la page" Nous contacter "', $contenu, $headers))
+	 if( mail('secdirection@clinalpsud.com', 'Message depuis  la page" Nous contacter "', $contenu, $headers))
 	 {
 			echo "<center>\t\t\t<B style=\"color : #00ff00;\">Votre message à été envoyé</b></center><br />\n"; 
 	 }
@@ -109,7 +112,7 @@ if(isset ($captchacrypte) && isset($_POST['captcha']))
 <?php //---------------------------------------------------------------------------------------------------------------//?>
 <p style="text-align: center;">________________________________</p>
 <h2><p align="center"><strong>Venir à la Polyclinique des Alpes du Sud.</strong></p></h2>
-<p style="text-align: center;"><img style="border: 1px solid black;" title="Plan d'accès." src="../Image/plan_acces.jpg" alt="" width="900" height="531" /><strong></strong></p>
+<p style="text-align: center;"><img style="border: 1px solid black;" title="Plan d'accès." src="../Image/plan_acces.jpg" alt="" width="100%" height="531" /><strong></strong></p>
 <p style="text-align: center;"><strong>Circulation intérieure.</strong></p>
 <p style="text-align: center;"><img class="size-full wp-image-76 aligncenter" title="Rez de chaussée." src="../Image/plan_rdc.jpg" alt="" width="426" height="279" /><br /><strong>Rez-de-Chaussée :
 </strong>Accueil - Admission - Radiologie - Orthopédie - Ophtalmologie - Cardiologie - Neurologie - Angiologie.</p>

@@ -2,6 +2,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
+<title>Congr&egrave;s</title>
+</head>
 <body>
 
 <h2><center><strong>Information du service d'urologie et anesthésie</strong></center></h2>

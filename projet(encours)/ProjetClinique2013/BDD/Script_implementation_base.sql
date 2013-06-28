@@ -1,7 +1,8 @@
 
 
 Drop database if exists Questionnaire;
-create database Questionnaire CHARACTER SET utf-8;
+
+create database Questionnaire CHARACTER SET utf8 COLLATE utf8_general_ci;
 use Questionnaire;
 
 Create table Service(

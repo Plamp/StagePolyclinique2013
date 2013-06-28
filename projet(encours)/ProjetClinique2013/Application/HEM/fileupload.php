@@ -40,12 +40,18 @@ if (!(in_array($extensionFichier, $extensionsAutorisees))) {
         echo "Le fichier  ".$_FILES["monfichierP"]["name"].
                 " a été déplacé vers le serveur";
 				//envoi vers la base de donnée :
-			$lien=$repertoireDestination.$nomDestination;
+			$lien="../Application/HEM/pdfProt/".$nomDestination;
 			$reqInsertLien="Insert into Hem values(null,'$ajoutArt','$lien',$idCat)";
-			$resInsertLien=mysql_query($reqInsertLien);	
-			echo "<br /><h3><center><a href='GestionHEM.php'> Retour à la page de gestion</a></center></h3>";
+			$resInsertLien=mysql_query($reqInsertLien);
+			echo '<script language="Javascript">
+				<!--
+				var t=setTimeout("document.location.replace(\'GestionHEM.php\')", 2000);
+			// -->
+			// </script>';	
+			echo " vous allez �tre redirig� vers la page de gestion, si la redirection est trop lente cliqu� sur le lien ci-dessous";
+			echo "<br /><h3><center><a href='GestionHEM.php'> Retour � la page de gestion  </a></center></h3>";
     } else {
-        echo "Le fichier n'a pas été uploadé (trop gros ?) ou ".
+        echo "Le fichier n'a pas �t� upload� (trop gros ?) ou ".
                 "Le déplacement du fichier temporaire a échoué".
                 " vérifiez l'existence du répertoire ".$repertoireDestination;
     }

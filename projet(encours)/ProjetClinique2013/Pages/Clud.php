@@ -3,7 +3,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
-
+<title>C.L.U.D</title>
+</head>
 <h2><center><strong>CLUD : Comité de LUtte contre la Douleur </strong></CENTER></h2>
 <p style="text-align: justify;">Conformément à l’article L.1112-4 du Code de santé publique, il appartient à chaque établissement de santé de promouvoir et de mettre en place l’organisation nécessaire pour répondre aux besoins des personnes quant à la prise en charge de leur douleur.</p>
 <p style="text-align: justify;">Le CLUD vous rappelle quelques règles pour une bonne prise en charge de la douleur.</p>

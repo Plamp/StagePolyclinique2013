@@ -35,6 +35,8 @@ $chaine2='';
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php include ("../style/style.css");?>
 <?php include("../include/entete.php");?>
+<title>Nous rejoindre</title>
+</head>
 <body>
 
 <h2><p style="text-align: center;"><strong>Bienvenue sur notre espace recrutement.</strong></p></h2><br>
@@ -53,11 +55,12 @@ Responsable des Ressources Humaines.</br>
 	$email=$_POST["email"];
 	echo "value='$email'";
 }?>/></center><br />
-<center>insérez le contenu de votre message:</center>
+<center>
+insérez le contenu de votre message (indiquez votre nom et numéro de telephone de préférence): 
+</center>
 <center><textarea name="contenu" style="width:500px;height:100px" ><?php if(isset ($captchacrypte) && isset($_POST['captcha']))
 {
 	$contenu=$_POST["contenu"];
-	echo "$contenu";
 }?></textarea></center><br />
 
 	<center><img src="../Captcha/captcha.php" /></center><br />
@@ -74,14 +77,15 @@ if(isset ($captchacrypte) && isset($_POST['captcha']))
 	{
 	if ( $captchacrypte == md5($_POST['captcha']) AND !empty($_POST['captcha']) ) {
 		$email=$_POST["email"];
-		$contenu=$_POST["contenu"];
+		$contenu="adresse mail de l'emetteur :".$email."<br />";
+		$contenu.=$_POST["contenu"];
 		//header du mail.
-		 $headers ='From:"Nous contacter"<'.$email.'>'."\n"; 
+		 $headers ='From:"Nous contacter"<siteweb@clinalpsud.com>'."\n"; 
 		 $headers .='Reply-To:'.$email. "\r\n";
 	  $headers .='Content-Type: text/html; charset="UTF-8"'."\n"; 
 	  $headers .='Content-Transfer-Encoding: 8bit'; 
 	  //envoi du mail
-	 if( mail('melindrae@gmail.com', 'Message depuis la page" Nous rejoindre "', $contenu, $headers))
+	 if( mail('secdirection@clinalpsud.com', 'Message depuis la page" Nous rejoindre "', $contenu, $headers))
 	 {
 			echo "<center>\t\t\t<B style=\"color : #00ff00;\">Votre message à été envoyé</b></center><br />\n"; 
 	 }
@@ -112,7 +116,7 @@ if(isset ($captchacrypte) && isset($_POST['captcha']))
 
 <?php //---------------------------------------------------------------------------------------------------------------//?>
 <p style="text-align: center;"><span style="color: #ffffff;">.</span></p>
-<p style="text-align: center;"><img style="border: 1px solid black;" title="Polyclinique des Alpes du Sud." src="../Image/07.jpg" alt="" width="800" height="362" /></p>
+<p style="text-align: center;"><img style="border: 1px solid black;" title="Polyclinique des Alpes du Sud." src="../Image/07.jpg" alt="" width="100%" height="362" /></p>
 <p style="text-align: justify;"><span style="color: #000000;">Cette page est mise à jour régulièrement. Si aucune offre ne correspond à votre recherche, vous pouvez nous faire parvenir une candidature spontanée.</span></p>
 <?php include("../include/pied.php");?>
 </div>
